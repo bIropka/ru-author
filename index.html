@@ -14,13 +14,14 @@
     <div class="content-block">
         <div class="logo"></div>
         <button class="tagline">РуАвтор - Ваш пропуск в мир копирайтинга</button>
-        <button>Конкурс</button>
+        <button class="competition">Конкурс</button>
         <form class="form-authorization" action="#"  onsubmit="return false">
-            <label for="user-name">Регистрация</label><label for="password">Забыли пароль?</label>
-            <input id="user-name" type="text"/>
-            <input id="password" type="password"/>
-            <label>Запомнить меня<input type="checkbox"/></label>
-            <input type="submit"/>
+            <div class="to-reg">Регистрация</div>
+            <div class="forget-pass">Забыли пароль?</div>
+            <label><input id="user-name" type="text" placeholder="Ваш логин"/></label>
+            <label><input id="password" type="password" placeholder="Ваш пароль"/></label>
+            <label class="checkbox-label">Запомнить меня<input type="checkbox"/></label>
+            <input type="submit" value="Вход"/>
         </form>
     </div>
 </header>
@@ -29,9 +30,9 @@
 
     <div class="left-column">
 
-        <button>Навигация</button>
+        <button class="navigation">Навигация</button>
 
-        <button>Добавить материал</button>
+        <button class="add-material">Добавить материал</button>
 
         <div class="block-title">Топ 5-ти авторов</div>
         <table class="authors-top">
@@ -59,16 +60,13 @@
                 <td>5</td>
                 <td><a href="#">lykov</a></td>
             </tr>
-            <tr>
-                <td colspan="2"><a href="#">Показать всех</a></td>
-            </tr>
         </table>
 
         <div class="block-title">Песочница</div>
         <div class="sub-title">Последние публикации</div>
         <ul class="sandbox">
-            <li><a href="#">Как натренировать красивые и сильные бедра? Какие нужно делать упражнения,
-                на каких тренажерах? Что такое изолированные</a>
+            <li><a href="#">Как натренировать кра&shy;сивые и сильные бедра? Какие нужно делать упражнения,
+                на каких тренажерах? Что такое изолированные упраж&shy;нения?</a>
             </li>
             <li>
                 <a href="#">Звезда жизни - отзыв воспоминание о романе Гамильтона Эдмонда Мура</a>
@@ -108,7 +106,7 @@
 
     <div class="right-column">
 
-        <div class="block-title">Отклики</div>
+        <div class="block-title">On-line издание РуАвтор - Ваш пропуск в мир копирайтинга. Требуются авторы!</div>
         <div class="top-block">
             <p>
                 Написание авторских статей и заметок за плату - вид заработка, доступный для всех!
@@ -116,9 +114,11 @@
                 себе на безбедную жизнь! Достаточно обладать грамотной речью, иметь минимально необходимые
                 навыки работы на компьютере (для набора текста) и иметь возможность выходить в интернет.
             </p>
-            <p>Размеры вашего заработка зависят только от вашего таланта публициста!</p>
-            <p>На нашем проекте вы можете зарабатывать 50 руб. за каждую 1000 просмотров ваших статей!</p>
-            <p>(пример расчета заработка приведен в Правилах в конце п.2.1)</p>
+            <p>
+                <span style="font-size: 18px;">Размеры вашего заработка зависят только от вашего таланта публициста!</span><br>
+                <span style="font-weight: 700;font-size: 16px;">На нашем проекте вы можете зарабатывать 50 руб. за каждую 1000 просмотров ваших статей!</span><br>
+                <span style="font-style: italic">(пример расчета заработка приведен в Правилах в конце п.2.1)</span>
+            </p>
             <p>
                 Если вы чувствуете в себе писательскую жилку (а кто из нас не мечтал писать мемуары),
                 то наш сервис - для вас! В непринужденном дружественном общении с другими участниками
@@ -136,7 +136,7 @@
         <ul class="publications-block">
             <li class="publication">
                <div class="publication-title">
-                   <a href="#">Если малыш плачет - что делать?</a>
+                   <a href="#" class="publication-name">Если малыш плачет - что делать?</a>
                    <div class="publication-date">22 ноября 2015</div>
                </div>
                <div class="publication-body">
@@ -156,7 +156,7 @@
                    </li>
                    <li>
                        <div class="param-name">Рейтинг:</div>
-                       <div class="param-value"><a href="#">10</a><span>&#8593;</span></div>
+                       <div class="param-value">10<a class="arrow-image" href="#"></a></div>
                    </li>
                    <li>
                        <div class="param-name">Автор:</div>
@@ -166,7 +166,7 @@
            </li>
             <li class="publication">
                 <div class="publication-title">
-                    <a href="#">Если малыш плачет - что делать?</a>
+                    <a href="#" class="publication-name">Если малыш плачет - что делать?</a>
                     <div class="publication-date">22 ноября 2015</div>
                 </div>
                 <div class="publication-body">
@@ -186,7 +186,7 @@
                     </li>
                     <li>
                         <div class="param-name">Рейтинг:</div>
-                        <div class="param-value"><a href="#">10</a><span>&#8593;</span></div>
+                        <div class="param-value">10<a class="arrow-image" href="#"></a></div>
                     </li>
                     <li>
                         <div class="param-name">Автор:</div>
@@ -196,7 +196,7 @@
             </li>
             <li class="publication">
                 <div class="publication-title">
-                    <a href="#">Если малыш плачет - что делать?</a>
+                    <a href="#" class="publication-name">Если малыш плачет - что делать?</a>
                     <div class="publication-date">22 ноября 2015</div>
                 </div>
                 <div class="publication-body">
@@ -216,7 +216,7 @@
                     </li>
                     <li>
                         <div class="param-name">Рейтинг:</div>
-                        <div class="param-value"><a href="#">10</a><span>&#8593;</span></div>
+                        <div class="param-value">10<a class="arrow-image" href="#"></a></div>
                     </li>
                     <li>
                         <div class="param-name">Автор:</div>
@@ -226,7 +226,7 @@
             </li>
             <li class="publication">
                 <div class="publication-title">
-                    <a href="#">Если малыш плачет - что делать?</a>
+                    <a href="#" class="publication-name">Если малыш плачет - что делать?</a>
                     <div class="publication-date">22 ноября 2015</div>
                 </div>
                 <div class="publication-body">
@@ -246,7 +246,7 @@
                     </li>
                     <li>
                         <div class="param-name">Рейтинг:</div>
-                        <div class="param-value"><a href="#">10</a><span>&#8593;</span></div>
+                        <div class="param-value">10<a class="arrow-image" href="#"></a></div>
                     </li>
                     <li>
                         <div class="param-name">Автор:</div>
@@ -257,7 +257,7 @@
         </ul>
 
         <ul class="page-numbers">
-            <li><a href="#">1</a></li>
+            <li><a  class="active" href="#">1</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
             <li><a href="#">4</a></li>
