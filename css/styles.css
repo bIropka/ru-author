@@ -290,14 +290,14 @@ nav {
     color: #455f7c;
     font-size: 16px;
     font-weight: 600;
-    margin: 10px;
+    margin: 10px 20px;
 }
 .close-window {
     float: right;
     color: #455f7c;
     font-size: 13px;
     font-weight: 600;
-    margin: 15px;
+    margin: 15px 20px;
     text-decoration: underline;
     cursor: pointer;
 }
