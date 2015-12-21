@@ -6,6 +6,19 @@
     <title>Главная</title>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navigation').click(function () {
+                $('nav').fadeIn();
+            });
+            $('nav').click(function (event) {
+                $target = $(event.target);
+                if (!$target.closest($('.window-nav')).length) $('nav').fadeOut();
+                if ($target.hasClass('close-window')) $('nav').fadeOut();
+            });
+        });
+
+    </script>
 </head>
 
 <body>
@@ -25,6 +38,88 @@
         </form>
     </div>
 </header>
+
+<nav>
+    <div class="window-nav">
+        <div class="title-window">Навигация</div>
+        <div class="close-window">Закрыть</div>
+        <ul class="nav-pages">
+            <li><a href="#">Авторы</a></li>
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="block-title">Рубрики</div>
+        <ul class="rubrics">
+            <li>
+                <ul>
+                    <li><a href="#">Дом и Семья</a></li>
+                    <li><a href="#">Кулинария, Рецепты, Напитки</a></li>
+                    <li><a href="#">Животный мир</a></li>
+                    <li><a href="#">Мужчина и Женщина</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Психология, отношения</a></li>
+                    <li><a href="#">Очевидное-Невероятное</a></li>
+                    <li><a href="#">История, культура</a></li>
+                    <li><a href="#">Игры, увлечения, хобби</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Праздники, Даты, События</a></li>
+                    <li><a href="#">Природа Земли</a></li>
+                    <li><a href="#">Обучение</a></li>
+                    <li><a href="#">Люди, Имена, Судьбы</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Интернет, Социальные сети</a></li>
+                    <li><a href="#">Мир людей</a></li>
+                    <li><a href="#">Интересные факты</a></li>
+                    <li><a href="#">Растения, Растительный мир</a></li>
+                    <li><a href="#">Мода, Стиль, Дизайн</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="block-title">Особые рубрики</div>
+        <ul class="rubrics">
+            <li>
+                <ul>
+                    <li><a href="#">Работа и Карьера</a></li>
+                    <li><a href="#">Здоровье и Красота</a></li>
+                    <li><a href="#">Техника и технический прогресс</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Товары и Услуги</a></li>
+                    <li><a href="#">Отзывы, Рецензии</a></li>
+                    <li><a href="#">Ремонт и Строительство</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Туризм, Путешествия, Отдых</a></li>
+                    <li><a href="#">Автомобили, Мотоциклы</a></li>
+                    <li><a href="#">Деньги, Финансы, Кредит</a></li>
+                    <li><a href="#">Спорт и активный отдых</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Недвижимость</a></li>
+                    <li><a href="#">Юридические вопросы</a></li>
+                    <li><a href="#">Связь и Коммуникация</a></li>
+                    <li><a href="#">Страхование, Охрана</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <main>
 

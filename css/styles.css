@@ -155,8 +155,8 @@ header .tagline {
     background-color: #d3d3d3;
     bottom: 5px;
     left: 8px;
-    -webkit-border-radius: 15px/2px 5px 5px;
-    -moz-border-radius: 15px/2px 5px 5px;
+    -webkit-border-radius: 9px 9px 5px 5px;
+    -moz-border-radius: 9px 9px 5px 5px;
     border-radius: 9px 9px 5px 5px;
 }
 .user-login {
@@ -257,6 +257,87 @@ header .tagline {
 .account-info .param-name, .account-info .param-value {line-height: 18px;}
 .account-info .param-value {margin-left: 5px;font-weight: 600;}
 
+/******** nav-window *******/
+nav {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    overflow: auto;
+}
+.window-nav{
+    position: absolute;
+    width: 900px;
+    height: 460px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+.window-nav a {
+    color: #455f7c;
+}
+.title-window {
+    float: left;
+    color: #455f7c;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px;
+}
+.close-window {
+    float: right;
+    color: #455f7c;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.close-window:hover {text-decoration: none;}
+.nav-pages {
+    display: block;
+    clear: both;
+    height: 40px;
+    border-top: 1px solid #ebebeb;
+    text-align: center;
+}
+.nav-pages li {
+    display: inline-block;
+    width: 105px;
+    line-height: 39px;
+    border-right: 1px solid #ebebeb;
+}
+.nav-pages li:last-child {border: none;}
+.rubrics {
+    display: table-row;
+}
+.rubrics>li {
+    display: table-cell;
+    border-right: 10px solid white;
+    padding: 10px 0;
+}
+.rubrics>li:nth-child(1){width: 255px;}
+.rubrics>li:nth-child(2){width: 200px;}
+.rubrics>li:nth-child(3){width: 210px;}
+.rubrics>li:last-child {border: none;width:210px;}
+.rubrics li li {
+    display: inline-block;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 25px;
+}
+.rubrics>li:first-child li {
+    padding-left: 20px;
+}
 /****************************
 ********* Main page *********
 ****************************/
