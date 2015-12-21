@@ -124,6 +124,142 @@ header .tagline {
     width: 70px;
     height: 35px;
 }
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ebebeb;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    float: left;
+    margin-top: 35px;
+    margin-left: 170px;
+    position: relative;
+}
+.figure-1 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #d3d3d3;
+    border: 2px solid #f8f8f8;
+    top: 5px;
+    left: 12px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.figure-2 {
+    position: absolute;
+    width: 26px;
+    height: 17px;
+    background-color: #d3d3d3;
+    bottom: 5px;
+    left: 8px;
+    -webkit-border-radius: 15px/2px 5px 5px;
+    -moz-border-radius: 15px/2px 5px 5px;
+    border-radius: 9px 9px 5px 5px;
+}
+.user-login {
+    color: #455f7c;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+    float: left;
+    margin-top: 45px;
+    margin-left: 10px;
+}
+.account-menu {
+    width: 140px;
+    height: 45px;
+    border: 1px solid #527294;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #587a9f;
+    float: right;
+    margin-top: 35px;
+}
+.menu-title {
+    display: inline-block;
+    width: 98px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding-top: 8px;
+    text-align: center;
+    float: left;
+}
+.menu-control {
+    float: right;
+    width: 40px;
+    height: 43px;
+    background-color: #507091;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+}
+.figure-3 {
+    position: absolute;
+    left: 20px;
+    margin-left: -5px;
+    top: 24px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid white;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+.menu-control:hover .sub-menu {
+    display: block;
+}
+.sub-menu {
+    display: none;
+    border: 1px solid #507091;
+    border-bottom: none;
+    width: 210px;
+    position: absolute;
+    top: 41px;
+    right: -1px;
+    background-color: white;
+    z-index: 1;
+}
+.sub-menu>li {
+    display: block;
+    height: 40px;
+    background-color: #5a7ea3;
+    color: white;
+    border-bottom: 1px solid #507091;
+    padding-left: 20px;
+}
+.sub-menu>li span {
+    color: white;
+    line-height: 40px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sub-menu>li span:hover {
+    text-decoration: none;
+}
+.sub-menu>li:first-child {
+    padding: 10px 0 10px 20px;
+    font-size: 15px;
+    height: auto;
+    background-color: white;
+}
+.user-login:hover {text-decoration: none;}
+.account-info li {
+    display: block;
+    line-height: 18px;
+}
+.account-info .param-name, .account-info .param-value {line-height: 18px;}
+.account-info .param-value {margin-left: 5px;font-weight: 600;}
+
+/****************************
+********* Main page *********
+****************************/
 .block-title {
     width: 100%;
     height: 45px;
