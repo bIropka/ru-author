@@ -179,6 +179,10 @@ header .tagline {
     background-color: #587a9f;
     float: right;
     margin-top: 35px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    position: relative;
 }
 .menu-title {
     display: inline-block;
@@ -191,20 +195,25 @@ header .tagline {
     float: left;
 }
 .menu-control {
+    display: block;
     float: right;
     width: 40px;
     height: 43px;
-    background-color: #507091;
     -webkit-border-radius: 0 5px 5px 0;
     -moz-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
     position: relative;
+    cursor: pointer;
+    border-left: 1px solid #507091;
+}
+.menu-active {
+    background-color: #507091;
 }
 .figure-3 {
     position: absolute;
     left: 20px;
     margin-left: -5px;
-    top: 24px;
+    top: 22px;
     margin-top: -3px;
     width: 0;
     height: 0;
@@ -212,20 +221,20 @@ header .tagline {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
 }
-.menu-control:hover .sub-menu {
-    display: block;
-}
 .sub-menu {
     display: none;
     border: 1px solid #507091;
     border-bottom: none;
     width: 210px;
     position: absolute;
-    top: 41px;
+    top: 44px;
     right: -1px;
     background-color: white;
     z-index: 1;
 }
+.visible {
+     display: block;
+ }
 .sub-menu>li {
     display: block;
     height: 40px;

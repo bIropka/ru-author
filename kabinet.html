@@ -8,7 +8,19 @@
     <script src="js/jquery-2.1.4.min.js"></script>
     <script>
         $(document).ready(function () {
-
+            var subMenu = $('.sub-menu');
+            var menuControl = $('.menu-control');
+            $(menuControl).click(function () {
+                if($(subMenu).hasClass('visible')) {
+                    $(subMenu).removeClass('visible');
+                    $(menuControl).removeClass('menu-active');
+                    $('.account-menu').css('border-radius', '5px');
+                } else {
+                    $(subMenu).addClass('visible');
+                    $(menuControl).addClass('menu-active');
+                    $('.account-menu').css('border-radius', '5px 5px 0 0');
+                }
+            });
         });
     </script>
 </head>
@@ -28,28 +40,46 @@
         <div class="account-menu">
             <div class="menu-title">Аккаунт</div>
             <div class="menu-control">
-                <div class="figure-3"></div>
-                <ul class="sub-menu">
-                    <li>
-                        <ul class="account-info">
-                            <li><div class="param-name">Черновиков:</div><div class="param-value">0</div></li>
-                            <li><div class="param-name">На модерации:</div><div class="param-value">0</div></li>
-                            <li><div class="param-name">На доработке:</div><div class="param-value">0</div></li>
-                            <li><div class="param-name">Всего комментариев:</div><div class="param-value">0</div></li>
-                            <li><div class="param-name">Авторский рейтинг:</div><div class="param-value">0</div></li>
-                            <li><div class="param-name">Рейтинг активности:</div><div class="param-value">-2</div></li>
-                        </ul>
-                    </li>
-                    <li><span>Профиль автора</span></li>
-                    <li><span>Раздел рефералов</span></li>
-                    <li><span>Список статей</span></li>
-                    <li><span>Список комментариев</span></li>
-                    <li><span>Сменить email</span></li>
-                    <li><span>Сменить пароль</span></li>
-                    <li><span>Назначить кошелек</span></li>
-                    <li><span>Выход</span></li>
-                </ul>
+                <span class="figure-3"></span>
             </div>
+            <ul class="sub-menu">
+                <li>
+                    <ul class="account-info">
+                        <li>
+                            <div class="param-name">Черновиков:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">На модерации:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">На доработке:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">Всего комментариев:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">Авторский рейтинг:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">Рейтинг активности:</div>
+                            <div class="param-value">-2</div>
+                        </li>
+                    </ul>
+                </li>
+                <li><span>Профиль автора</span></li>
+                <li><span>Раздел рефералов</span></li>
+                <li><span>Список статей</span></li>
+                <li><span>Список комментариев</span></li>
+                <li><span>Сменить email</span></li>
+                <li><span>Сменить пароль</span></li>
+                <li><span>Назначить кошелек</span></li>
+                <li><span>Выход</span></li>
+            </ul>
         </div>
     </div>
 </header>
