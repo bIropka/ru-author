@@ -35,7 +35,7 @@ header {
     border-bottom: 1px solid #eeeeee;
     margin-bottom: 30px;
 }
-main, .content-block {
+main, .header-block {
     width: 1110px;
     margin: 0 auto;
 }
@@ -135,6 +135,7 @@ header .tagline {
     margin-top: 35px;
     margin-left: 170px;
     position: relative;
+    background-color: white;
 }
 .figure-1 {
     position: absolute;
@@ -350,7 +351,7 @@ nav {
 /****************************
 ********* Main page *********
 ****************************/
-.block-title {
+.block-title, .content-title {
     width: 100%;
     height: 45px;
     background: linear-gradient(to bottom, #5a7ea3, #56789c);
@@ -549,6 +550,119 @@ nav {
     color: white;
     text-decoration: none;
 }
+/****************************
+******* Content page ********
+****************************/
+.content-title {
+    background: #e5e9ff;
+    color: #455f7c;
+    font-size: 16px;
+}
+.content-info {
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    width: 100%;
+    height: 60px;
+}
+.content-info li {
+    display: block;
+    width: 40%;
+    float: left;
+    margin: 5px 0 0 15px;
+}
+.content-info li:nth-child(2n) {
+    float: right;
+    text-align: right;
+    margin: 5px 15px 0 0;
+}
+.content-info li .param-name, .content-info li .param-value {
+    line-height: normal;
+    font-size: 13px;
+}
+.content-info a {
+    font-size: 13px;
+}
+.content-block {
+    width: 100%;
+    border: 1px solid #ebebeb;
+}
+.content-photo {
+    float: left;
+    margin: 15px 0 0 15px;
+}
+.content-text {
+    width: 600px;
+    float: right;
+    padding: 10px 20px 10px 10px;
+    text-align: justify;
+}
+.content-text p {
+    margin-bottom: 20px;
+}
+.content-text p:last-child {
+    margin: 0;
+}
+.clearfix {
+    clear: both;
+}
+.comments-info {
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    font-size: 13px;
+    padding-left: 15px;
+}
+.comments {
+    list-style: none;
+}
+.comment {
+    border: 1px solid #ebebeb;
+    border-bottom: none;
+    padding: 10px 15px;
+}
+.comment .user-avatar {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+}
+.comment .user-login {
+    margin: 0;
+    float: none;
+}
+.comment .comment-date, .comment .comment-time {
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.comment:last-child {
+    border-bottom: none;
+}
+.comment:nth-child(2n) {
+    background-color: #fafbff;
+}
+.form-comment {
+    border: 1px solid #ebebeb;
+    border-top: none;
+}
+#comment-field {
+    resize: none;
+    width: 300px;
+    height: 100px;
+    margin: 10px 15px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border: 1px solid #ebebeb;
+}
+.form-comment input[type="submit"] {
+    display: block;
+    margin: 10px 15px;
+    height: 35px;
+    width: 150px;
+}
+#comment-field:focus::-webkit-input-placeholder {color: transparent}
+#comment-field:focus::-moz-placeholder {color: transparent}
+#comment-field:focus:-moz-placeholder {color: transparent}
+#comment-field:focus:-ms-input-placeholder {color: transparent}
 footer {
     width: 100%;
     min-width: 1110px;

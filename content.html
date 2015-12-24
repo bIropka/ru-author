@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контент</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navigation').click(function () {
+                $('nav').fadeIn();
+            });
+            $('nav').click(function (event) {
+                $target = $(event.target);
+                if (!$target.closest($('.window-nav')).length) $('nav').fadeOut();
+                if ($target.hasClass('close-window')) $('nav').fadeOut();
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-block">
+        <div class="logo"></div>
+        <button class="tagline">РуАвтор - Ваш пропуск в мир копирайтинга</button>
+        <button class="competition">Конкурс</button>
+        <form class="form-authorization" action="#"  onsubmit="return false">
+            <div class="to-reg">Регистрация</div>
+            <div class="forget-pass">Забыли пароль?</div>
+            <label><input id="user-name" type="text" placeholder="Ваш логин"/></label>
+            <label><input id="password" type="password" placeholder="Ваш пароль"/></label>
+            <label class="checkbox-label">Запомнить меня<input type="checkbox"/></label>
+            <input type="submit" value="Вход"/>
+        </form>
+    </div>
+</header>
+
+<nav>
+    <div class="window-nav">
+        <div class="title-window">Навигация</div>
+        <div class="close-window">Закрыть</div>
+        <ul class="nav-pages">
+            <li><a href="#">Авторы</a></li>
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="block-title">Рубрики</div>
+        <ul class="rubrics">
+            <li>
+                <ul>
+                    <li><a href="#">Дом и Семья</a></li>
+                    <li><a href="#">Кулинария, Рецепты, Напитки</a></li>
+                    <li><a href="#">Животный мир</a></li>
+                    <li><a href="#">Мужчина и Женщина</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Психология, отношения</a></li>
+                    <li><a href="#">Очевидное-Невероятное</a></li>
+                    <li><a href="#">История, культура</a></li>
+                    <li><a href="#">Игры, увлечения, хобби</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Праздники, Даты, События</a></li>
+                    <li><a href="#">Природа Земли</a></li>
+                    <li><a href="#">Обучение</a></li>
+                    <li><a href="#">Люди, Имена, Судьбы</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Интернет, Социальные сети</a></li>
+                    <li><a href="#">Мир людей</a></li>
+                    <li><a href="#">Интересные факты</a></li>
+                    <li><a href="#">Растения, Растительный мир</a></li>
+                    <li><a href="#">Мода, Стиль, Дизайн</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="block-title">Особые рубрики</div>
+        <ul class="rubrics">
+            <li>
+                <ul>
+                    <li><a href="#">Работа и Карьера</a></li>
+                    <li><a href="#">Здоровье и Красота</a></li>
+                    <li><a href="#">Техника и технический прогресс</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Товары и Услуги</a></li>
+                    <li><a href="#">Отзывы, Рецензии</a></li>
+                    <li><a href="#">Ремонт и Строительство</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Туризм, Путешествия, Отдых</a></li>
+                    <li><a href="#">Автомобили, Мотоциклы</a></li>
+                    <li><a href="#">Деньги, Финансы, Кредит</a></li>
+                    <li><a href="#">Спорт и активный отдых</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#">Недвижимость</a></li>
+                    <li><a href="#">Юридические вопросы</a></li>
+                    <li><a href="#">Связь и Коммуникация</a></li>
+                    <li><a href="#">Страхование, Охрана</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+
+    <div class="left-column">
+
+        <button class="navigation">Навигация</button>
+
+        <button class="add-material">Добавить материал</button>
+
+        <div class="block-title">Топ 5-ти авторов</div>
+        <table class="authors-top">
+            <tr>
+                <th>#</th>
+                <th>Ник</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#">Elro</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#">devatyh</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#">Nick Martyn</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#">AWC</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="#">lykov</a></td>
+            </tr>
+        </table>
+
+        <div class="block-title">Песочница</div>
+        <div class="sub-title">Последние публикации</div>
+        <ul class="sandbox">
+            <li><a href="#">Как натренировать кра&shy;сивые и сильные бедра? Какие нужно делать упражнения,
+                на каких тренажерах? Что такое изолированные упраж&shy;нения?</a>
+            </li>
+            <li>
+                <a href="#">Звезда жизни - отзыв воспоминание о романе Гамильтона Эдмонда Мура</a>
+            </li>
+            <li>
+                <a href="#">Шевеление плода при беременности. На какой неделе беременности первые шевеления плода?</a>
+            </li>
+            <li>
+                <a href="#">В песочницу</a>
+            </li>
+        </ul>
+
+        <div class="block-title">Отклики</div>
+        <div class="sub-title">Последние отклики</div>
+        <ul class="reviews">
+            <li>
+                <div class="review-name">Лыков Алексей</div>
+                <div class="review-text">
+                    <a href="#">Кроха сын пришёл к отцу и спросила кроха, что так</a>...
+                </div>
+            </li>
+            <li>
+                <div class="review-name">Лыков Алексей</div>
+                <div class="review-text">
+                    <a href="#">Кроха сын пришёл к отцу и спросила кроха, что так</a>...
+                </div>
+            </li>
+            <li>
+                <div class="review-name">Лыков Алексей</div>
+                <div class="review-text">
+                    <a href="#">Кроха сын пришёл к отцу и спросила кроха, что так</a>...
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="right-column">
+
+        <div class="content-title">Звезда жизни - отзыв-воспоминание о романе Гамильтона Эдмонда Мура</div>
+        <ul class="content-info">
+            <li>
+                <div class="param-name">Рубрика:</div>
+                <div class="param-value"><a href="#">Дом и семья</a></div>
+            </li>
+            <li>
+                <div class="param-name">Автор:</div>
+                <div class="param-value"><a href="#">Виктория Гордеева</a></div>
+            </li>
+            <li>
+                <div class="param-name">Дата:</div>
+                <div class="param-value">22 ноября 2015</div>
+            </li>
+            <li>
+                <div class="param-name">Рейтинг:</div>
+                <div class="param-value">10<a class="arrow-image" href="#"></a></div>
+            </li>
+        </ul>
+        <div class="content-block">
+            <img class="content-photo" src="images/content-photo.jpg" alt="Фото статьи"/>
+            <div class="content-text">
+                <p>
+                    Меня всегда интересовал космос. К счастью, в моём детстве было достаточно книг, из которых я узнавал
+                    много интересного о космосе. В частности, популярная детская энциклопедия «Я познаю мир. Космос».
+                    Единственное, что серьёзно расстраивало в этой книжке, так это чёткое утверждение, что «жизни на
+                    Марсе нет». А так хотелось верить, что жизнь там всё-таки есть, хотя бы в примитивной форме – бактерии,
+                    мхи и т.п. Из этой же книги, да и из других, узнал, что наше солнце лишь малая часть огромной галактики,
+                    что существуют звёзды в тысячи раз превосходящие размером наше родное светило. Аж дух захватывало!
+                    Хотелось полететь в космос, посмотреть на его красоты… И, видимо, не только мне…
+                </p>
+                <p>
+                    "Давно-давно мальчик из Огайо закричал: «Я очень хочу однажды улететь в космос!». Мальчика звали Кирк
+                    Хэммонд". Такое вот причудливое для русского уха имя. Но это не важно, важно то, что желания – не мечты,
+                    а желания исполняются! Помню в детстве, ребята рассказывали, будто, если сказать, что я хочу вырасти,
+                    то обязательно станешь высоким. Приводили доказательства, типа один просил, а сейчас он под 2 метра
+                    ростом. Я не хотел быть огромным, мне казалось, что вполне хватит и метра с восьмидесятью сантиметрами.
+                    Так и вышло... Не знаю, чего хотел Эдмонд Мур Гамильтон, автор «Звезды жизни»...
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="comments-info">
+            <div class="param-name">Комментариев:</div>
+            <div class="param-value">3</div>
+        </div>
+        <ul class="comments">
+            <li class="comment">
+                <div class="user-avatar">
+                    <div class="figure-2"></div>
+                    <div class="figure-1"></div>
+                </div>
+                <div class="user-login">Vasya Pupkin</div>
+                <div class="comment-date">20.12.2015</div>
+                <div class="comment-time">14:58:30</div>
+                <div class="comment-text">
+                    Ну, лучше, всё же, роман почитать. Отзыв весьма обобщительный. Если интересно, то лучше роман.
+                    Ну, лично мне он понравился. Прл счастье - это мои рассуждения. Автор романа предлагает подумать.
+                </div>
+            </li>
+            <li class="comment">
+                <div class="user-avatar">
+                    <div class="figure-2"></div>
+                    <div class="figure-1"></div>
+                </div>
+                <div class="user-login">Vasya Pupkin</div>
+                <div class="comment-date">20.12.2015</div>
+                <div class="comment-time">14:58:30</div>
+                <div class="comment-text">
+                    Ну, лучше, всё же, роман почитать. Отзыв весьма обобщительный. Если интересно, то лучше роман.
+                    Ну, лично мне он понравился. Прл счастье - это мои рассуждения. Автор романа предлагает подумать.
+                </div>
+            </li>
+            <li class="comment">
+                <div class="user-avatar">
+                    <div class="figure-2"></div>
+                    <div class="figure-1"></div>
+                </div>
+                <div class="user-login">Vasya Pupkin</div>
+                <div class="comment-date">20.12.2015</div>
+                <div class="comment-time">14:58:30</div>
+                <div class="comment-text">
+                    Ну, лучше, всё же, роман почитать. Отзыв весьма обобщительный. Если интересно, то лучше роман.
+                    Ну, лично мне он понравился. Прл счастье - это мои рассуждения. Автор романа предлагает подумать.
+                </div>
+            </li>
+        </ul>
+        <div class="content-title">Оставить комментарий</div>
+        <form class="form-comment" action="#" onsubmit="return false">
+            <label><textarea id="comment-field" cols="20" rows="5" placeholder="Текст комментария"></textarea></label>
+            <input type="submit" value="Отправить"/>
+        </form>
+    </div>
+
+</main>
+
+<footer>
+    <div class="content-block">
+        <div>COPYRIGHT © 2011-2015. ИНФОРМАЦИОННЫЙ ПОЗНАВАТЕЛЬНЫЙ ИНТЕРНЕТ-ЖУРНАЛ "РУАВТОР" 16+</div>
+        <div>При полном или частичном копировании материалов активная прямая гипер-ссылка на www.RuAvtor.ru обязательна!</div>
+    </div>
+</footer>
+
+</body>
+</html>
