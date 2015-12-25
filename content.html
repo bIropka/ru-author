@@ -16,8 +16,17 @@
                 if (!$target.closest($('.window-nav')).length) $('nav').fadeOut();
                 if ($target.hasClass('close-window')) $('nav').fadeOut();
             });
+            /**************************/
+            var changeFont = $('.font-resizer li');
+            $(changeFont).click(function() {
+                if (!$(this).hasClass('active')){
+                    $(changeFont).removeClass('active');
+                    $(this).addClass('active');
+                    var fontSize = $(this).css('font-size');
+                    $('.content-text').css('font-size', fontSize);
+                }
+            });
         });
-
     </script>
 </head>
 
@@ -220,6 +229,14 @@
                 <div class="param-value">10<a class="arrow-image" href="#"></a></div>
             </li>
         </ul>
+        <div class="font-resizer">
+            <div class="text-1">Размер шрифта:</div>
+            <ul style="font-size: 15px;">
+                <li class="active small">А</li>
+                <li class="medium" style="font-size: 115%;">А</li>
+                <li class="large" style="font-size: 130%;">А</li>
+            </ul>
+        </div>
         <div class="content-block">
             <img class="content-photo" src="images/content-photo.jpg" alt="Фото статьи"/>
             <div class="content-text">

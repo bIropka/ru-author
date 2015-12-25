@@ -582,17 +582,43 @@ nav {
 .content-info a {
     font-size: 13px;
 }
+.font-resizer {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ebebeb;
+    border-bottom: none;
+    text-align: right;
+    padding-right: 15px;
+}
+.font-resizer .text-1 {
+    display: inline-block;
+    margin-right: 1%;
+}
+.font-resizer ul {
+    display: inline-block;
+    list-style: none;
+}
+.font-resizer li {
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.font-resizer .active {
+    color: red;
+}
 .content-block {
     width: 100%;
     border: 1px solid #ebebeb;
 }
 .content-photo {
     float: left;
-    margin: 15px 0 0 15px;
+    margin: 15px 15px 5px 15px;
 }
 .content-text {
-    width: 600px;
-    float: right;
+    width: 100%;
     padding: 10px 20px 10px 10px;
     text-align: justify;
 }
