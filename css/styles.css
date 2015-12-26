@@ -27,18 +27,20 @@ button, input[type="submit"] {
 body {
     width: 100%;
 }
-header {
+.header {
+    position: absolute;
     width: 100%;
     min-width: 1110px;
     height: 115px;
     background-color: #f8f8f8;
     border-bottom: 1px solid #eeeeee;
     margin-bottom: 30px;
+    top: 0;
 }
-main {
+.main {
     position: relative;
 }
-main, .header-block {
+.main, .header-block {
     width: 1110px;
     margin: 0 auto;
 }
@@ -51,7 +53,7 @@ main, .header-block {
     float: left;
     margin-top: 25px;
 }
-header .tagline {
+.header .tagline {
     display: inline-block;
     width: 200px;
     height: 45px;
@@ -305,6 +307,7 @@ header .tagline {
     text-decoration: none;
 }
 .title-window {
+
     float: left;
     color: #455f7c;
     font-size: 16px;
@@ -371,6 +374,7 @@ header .tagline {
     padding-left: 20px;
 }
 .left-column {
+    margin-top: 145px;
     width: 200px;
     float: left;
     margin-bottom: 35px;
@@ -445,7 +449,7 @@ header .tagline {
     width: 870px;
     font-size: 15px;
     position: absolute;
-    top: 0;
+    top: 145px;
     right: 0;
 }
 .top-block {
@@ -625,9 +629,19 @@ header .tagline {
     width: 100%;
     border: 1px solid #ebebeb;
 }
-.content-photo {
+.pictures-block {
+    width: 300px;
     float: left;
     margin: 15px 15px 5px 15px;
+}
+.content-photo, .advertising {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.advertising {
+    height: 50px;
+    background-color: red;
+    margin-bottom: 0;
 }
 .content-text {
     width: 100%;
@@ -701,7 +715,7 @@ header .tagline {
 #comment-field:focus::-moz-placeholder {color: transparent}
 #comment-field:focus:-moz-placeholder {color: transparent}
 #comment-field:focus:-ms-input-placeholder {color: transparent}
-footer {
+.footer {
     width: 100%;
     min-width: 1110px;
     clear: both;
@@ -710,10 +724,10 @@ footer {
     height: 115px;
     padding-top: 40px;
 }
-footer .content-block {
+.footer .content-block {
     border: none;
 }
-footer div {
+.footer div {
     color: white;
     font-size: 13px;
     font-weight: 600;
