@@ -271,7 +271,7 @@ header .tagline {
 .account-info .param-value {margin-left: 5px;font-weight: 600;}
 
 /******** nav-window *******/
-nav {
+.navigation-block {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -280,6 +280,7 @@ nav {
     background: rgba(0,0,0,0.5);
     display: none;
     overflow: auto;
+    z-index: 100;
 }
 .window-nav{
     position: absolute;
@@ -295,8 +296,13 @@ nav {
     -moz-border-radius: 7px;
     border-radius: 7px;
 }
-.window-nav a {
+.window-nav li {
     color: #455f7c;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.window-nav li:hover {
+    text-decoration: none;
 }
 .title-window {
     float: left;

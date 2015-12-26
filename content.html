@@ -9,12 +9,12 @@
     <script>
         $(document).ready(function () {
             $('.navigation').click(function () {
-                $('nav').fadeIn();
+                $('.navigation-block').fadeIn();
             });
-            $('nav').click(function (event) {
+            $('.navigation-block').click(function (event) {
                 $target = $(event.target);
-                if (!$target.closest($('.window-nav')).length) $('nav').fadeOut();
-                if ($target.hasClass('close-window')) $('nav').fadeOut();
+                if (!$target.closest($('.window-nav')).length) $('.navigation-block').fadeOut();
+                if ($target.hasClass('close-window')) $('.navigation-block').fadeOut();
             });
             /**************************/
             var changeFont = $('.font-resizer li');
@@ -48,49 +48,49 @@
     </div>
 </header>
 
-<nav>
+<div class="navigation-block">
     <div class="window-nav">
         <div class="title-window">Навигация</div>
         <div class="close-window">Закрыть</div>
         <ul class="nav-pages">
-            <li><a href="#">Авторы</a></li>
-            <li><a href="#">Правила</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li>Авторы</li>
+            <li>Правила</li>
+            <li>Новости</li>
+            <li>Контакты</li>
         </ul>
         <div class="block-title">Рубрики</div>
         <ul class="rubrics">
             <li>
                 <ul>
-                    <li><a href="#">Дом и Семья</a></li>
-                    <li><a href="#">Кулинария, Рецепты, Напитки</a></li>
-                    <li><a href="#">Животный мир</a></li>
-                    <li><a href="#">Мужчина и Женщина</a></li>
+                    <li>Дом и Семья</li>
+                    <li>Кулинария, Рецепты, Напитки</li>
+                    <li>Животный мир</li>
+                    <li>Мужчина и Женщина</li>
                 </ul>
             </li>
             <li>
                 <ul>
-                    <li><a href="#">Психология, отношения</a></li>
-                    <li><a href="#">Очевидное-Невероятное</a></li>
-                    <li><a href="#">История, культура</a></li>
-                    <li><a href="#">Игры, увлечения, хобби</a></li>
+                    <li>Психология, отношения</li>
+                    <li>Очевидное-Невероятное</li>
+                    <li>История, культура</li>
+                    <li>Игры, увлечения, хобби</li>
                 </ul>
             </li>
             <li>
                 <ul>
-                    <li><a href="#">Праздники, Даты, События</a></li>
-                    <li><a href="#">Природа Земли</a></li>
-                    <li><a href="#">Обучение</a></li>
-                    <li><a href="#">Люди, Имена, Судьбы</a></li>
+                    <li>Праздники, Даты, События</li>
+                    <li>Природа Земли</li>
+                    <li>Обучение</li>
+                    <li>Люди, Имена, Судьбы</li>
                 </ul>
             </li>
             <li>
                 <ul>
-                    <li><a href="#">Интернет, Социальные сети</a></li>
-                    <li><a href="#">Мир людей</a></li>
-                    <li><a href="#">Интересные факты</a></li>
-                    <li><a href="#">Растения, Растительный мир</a></li>
-                    <li><a href="#">Мода, Стиль, Дизайн</a></li>
+                    <li>Интернет, Социальные сети</li>
+                    <li>Мир людей</li>
+                    <li>Интересные факты</li>
+                    <li>Растения, Растительный мир</li>
+                    <li>Мода, Стиль, Дизайн</li>
                 </ul>
             </li>
         </ul>
@@ -98,37 +98,37 @@
         <ul class="rubrics">
             <li>
                 <ul>
-                    <li><a href="#">Работа и Карьера</a></li>
-                    <li><a href="#">Здоровье и Красота</a></li>
-                    <li><a href="#">Техника и технический прогресс</a></li>
+                    <li>Работа и Карьера</li>
+                    <li>Здоровье и Красота</li>
+                    <li>Техника и технический прогресс</li>
                 </ul>
             </li>
             <li>
                 <ul>
-                    <li><a href="#">Товары и Услуги</a></li>
-                    <li><a href="#">Отзывы, Рецензии</a></li>
-                    <li><a href="#">Ремонт и Строительство</a></li>
+                    <li>Товары и Услуги</li>
+                    <li>Отзывы, Рецензии</li>
+                    <li>Ремонт и Строительство</li>
                 </ul>
             </li>
             <li>
                 <ul>
-                    <li><a href="#">Туризм, Путешествия, Отдых</a></li>
-                    <li><a href="#">Автомобили, Мотоциклы</a></li>
-                    <li><a href="#">Деньги, Финансы, Кредит</a></li>
-                    <li><a href="#">Спорт и активный отдых</a></li>
+                    <li>Туризм, Путешествия, Отдых</li>
+                    <li>Автомобили, Мотоциклы</li>
+                    <li>Деньги, Финансы, Кредит</li>
+                    <li>Спорт и активный отдых</li>
                 </ul>
             </li>
             <li>
                 <ul>
-                    <li><a href="#">Недвижимость</a></li>
-                    <li><a href="#">Юридические вопросы</a></li>
-                    <li><a href="#">Связь и Коммуникация</a></li>
-                    <li><a href="#">Страхование, Охрана</a></li>
+                    <li>Недвижимость</li>
+                    <li>Юридические вопросы</li>
+                    <li>Связь и Коммуникация</li>
+                    <li>Страхование, Охрана</li>
                 </ul>
             </li>
         </ul>
     </div>
-</nav>
+</div>
 
 <main>
 
