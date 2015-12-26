@@ -35,6 +35,9 @@ header {
     border-bottom: 1px solid #eeeeee;
     margin-bottom: 30px;
 }
+main {
+    position: relative;
+}
 main, .header-block {
     width: 1110px;
     margin: 0 auto;
@@ -434,8 +437,10 @@ nav {
 }
 .right-column {
     width: 870px;
-    float: right;
     font-size: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .top-block {
     width: 100%;
@@ -605,6 +610,7 @@ nav {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    line-height: 40px;
 }
 .font-resizer .active {
     color: red;
@@ -697,6 +703,9 @@ footer {
     background-color: #595959;
     height: 115px;
     padding-top: 40px;
+}
+footer .content-block {
+    border: none;
 }
 footer div {
     color: white;
