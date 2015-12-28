@@ -262,6 +262,7 @@ body {
     text-align: center;
     line-height: 20px;
     position: relative;
+    cursor: pointer;
 }
 .hint {
     position: absolute;
@@ -278,10 +279,6 @@ body {
     padding: 30px 10px 10px;
     text-decoration: none;
     line-height: normal;
-}
-
-.hint-mark:hover .hint {
-    display: block;
 }
 
 /******** nav-window *******/

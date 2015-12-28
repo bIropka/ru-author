@@ -45,6 +45,15 @@
                 });
             });
             /****************/
+            $('.hint-mark').click(function(){
+                if($(this).hasClass('active')){
+                    $('.hint').fadeOut(1000);
+                    $(this).removeClass('active');
+                } else {
+                    $('.hint').fadeIn(1000);
+                    $(this).addClass('active');
+                }
+            });
         });
     </script>
 </head>
