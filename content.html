@@ -26,6 +26,21 @@
                     $('.content-text').css('font-size', fontSize);
                 }
             });
+            /************* for navi-block *************/
+            var h_hght = 135;
+            var h_mrg = 0;
+            $(function(){
+                $(window).scroll(function(){
+                    var top = $(this).scrollTop();
+                    var elem = $('#navi-block');
+                    if (top+h_mrg < h_hght) {
+                        elem.css('top', (h_hght-top));
+                    } else {
+                        elem.css('top', h_mrg);
+                    }
+                });
+            });
+            /****************/
         });
     </script>
 </head>
@@ -143,9 +158,13 @@
 
     <div class="left-column">
 
-        <button class="navigation">Навигация</button>
+        <div class="navi-block" id="navi-block">
 
-        <button class="add-material">Добавить материал</button>
+            <button class="navigation">Навигация</button>
+
+            <button class="add-material">Добавить материал</button>
+
+        </div>
 
         <div class="block-title">Топ 5-ти авторов</div>
         <table class="authors-top">
@@ -317,14 +336,15 @@
     </div>
 </div>
 
-
-
 <div class="footer">
     <div class="content-block">
         <div>COPYRIGHT © 2011-2015. ИНФОРМАЦИОННЫЙ ПОЗНАВАТЕЛЬНЫЙ ИНТЕРНЕТ-ЖУРНАЛ "РУАВТОР" 16+</div>
         <div>При полном или частичном копировании материалов активная прямая гипер-ссылка на www.RuAvtor.ru обязательна!</div>
     </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow34.js"></script>
 
 </body>
 </html>
