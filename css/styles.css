@@ -231,7 +231,7 @@ body {
     display: none;
     border: 1px solid #507091;
     border-bottom: none;
-    width: 210px;
+    width: 230px;
     position: absolute;
     top: 44px;
     right: -1px;
@@ -271,6 +271,44 @@ body {
 }
 .account-info .param-name, .account-info .param-value {line-height: 18px;}
 .account-info .param-value {margin-left: 5px;font-weight: 600;}
+.hint-mark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    color: white;
+    background-color: #56789c;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    position: relative;
+}
+.hint {
+    position: absolute;
+    top: 20px;
+    right: -18px;
+    width: 207px;
+    height: 92px;
+    display: none;
+    background: url("../images/bubble.png");
+    z-index: 1000;
+    color: white;
+    text-align: left;
+    font-weight: normal;
+}
+.hint-mark .hint span {
+    display: inline-block;
+    text-decoration: none;
+    line-height: normal;
+    padding: 10px;
+    margin: 10px;
+}
+.hint-mark:hover .hint {
+    display: block;
+}
 
 /******** nav-window *******/
 .navigation-block {
@@ -366,7 +404,8 @@ body {
 .block-title, .content-title {
     width: 100%;
     height: 45px;
-    background: linear-gradient(to bottom, #5a7ea3, #56789c);
+    /*background: linear-gradient(to bottom, #5a7ea3, #56789c);*/
+    background: #5a7ea3;
     color: white;
     font-size: 18px;
     font-weight: 600;
