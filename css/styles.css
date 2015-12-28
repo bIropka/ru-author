@@ -139,31 +139,8 @@ body {
     float: left;
     margin-top: 35px;
     margin-left: 170px;
-    position: relative;
-    background-color: white;
-}
-.figure-1 {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-color: #d3d3d3;
-    border: 2px solid #f8f8f8;
-    top: 5px;
-    left: 12px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-}
-.figure-2 {
-    position: absolute;
-    width: 26px;
-    height: 17px;
-    background-color: #d3d3d3;
-    bottom: 5px;
-    left: 8px;
-    -webkit-border-radius: 9px 9px 5px 5px;
-    -moz-border-radius: 9px 9px 5px 5px;
-    border-radius: 9px 9px 5px 5px;
+    background: url("../images/avatar.png") no-repeat;
+    background-size: cover;
 }
 .user-login {
     color: #455f7c;
@@ -290,22 +267,19 @@ body {
     position: absolute;
     top: 20px;
     right: -18px;
-    width: 207px;
-    height: 92px;
+    min-width: 207px;
+    min-height: 92px;
     display: none;
-    background: url("../images/bubble.png");
-    z-index: 1000;
+    background: url("../images/bubble.png") no-repeat;
+    background-size: 100% 100%;
     color: white;
     text-align: left;
     font-weight: normal;
-}
-.hint-mark .hint span {
-    display: inline-block;
+    padding: 30px 10px 10px;
     text-decoration: none;
     line-height: normal;
-    padding: 10px;
-    margin: 10px;
 }
+
 .hint-mark:hover .hint {
     display: block;
 }
@@ -404,7 +378,6 @@ body {
 .block-title, .content-title {
     width: 100%;
     height: 45px;
-    /*background: linear-gradient(to bottom, #5a7ea3, #56789c);*/
     background: #5a7ea3;
     color: white;
     font-size: 18px;
@@ -619,8 +592,8 @@ body {
 ******* Content page ********
 ****************************/
 .content-title {
-    background: #e5e9ff;
-    color: #455f7c;
+    background: #5a7ea3;
+    color: white;
     font-size: 16px;
 }
 .content-info {
