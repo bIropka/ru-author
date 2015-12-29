@@ -372,7 +372,7 @@ body {
 /****************************
 ********* Main page *********
 ****************************/
-.block-title, .content-title {
+.block-title, h1 {
     width: 100%;
     height: 45px;
     background: #5a7ea3;
@@ -472,7 +472,7 @@ body {
     margin-top: 145px;
     margin-bottom: 30px;
 }
-.top-block {
+.top-block, .edit-block {
     width: 100%;
     padding: 7px 20px;
     border: 1px solid #ebebeb;
@@ -735,6 +735,71 @@ body {
 #comment-field:focus::-moz-placeholder {color: transparent}
 #comment-field:focus:-moz-placeholder {color: transparent}
 #comment-field:focus:-ms-input-placeholder {color: transparent}
+/****************************
+******* Edit page ********
+****************************/
+.field-wrap {
+    display: block;
+    width: 435px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.field-wrap select, .field-wrap input, .field-wrap textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    font-size: 15px;
+    resize: none;
+    overflow: auto;
+}
+.field-wrap select, .field-wrap input {
+    height: 40px;
+    padding: 0 10px;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #cccccc;font-size: 15px;}
+input::-moz-placeholder, textarea::-moz-placeholder {color: #cccccc;font-size: 15px;}
+input:-moz-placeholder, textarea:-moz-placeholder {color: #cccccc;font-size: 15px;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {color: #cccccc;font-size: 15px;}
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {color: transparent}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {color: transparent}
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {color: transparent}
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {color: transparent}
+select::-ms-expand {
+    display: none;
+    content: '\25bc';
+}
+select {
+    position: relative;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    -ms-appearance: none;
+    appearance: none!important;
+    background-color: transparent;
+    color: #cccccc;
+}
+
+.select-mark {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #e5e9ff;
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+}
+input[type="submit"] {
+    width: 150px;
+    margin-top: 30px;
+}
+/*********** footer ************/
 .footer {
     width: 100%;
     min-width: 1110px;

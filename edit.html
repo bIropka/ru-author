@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контент</title>
+    <title>Добавление материала</title>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.5.6/full/ckeditor.js"></script>
     <script>
         $(document).ready(function () {
             $('.navigation').click(function () {
@@ -16,15 +17,18 @@
                 if (!$target.closest($('.window-nav')).length) $('.navigation-block').fadeOut();
                 if ($target.hasClass('close-window')) $('.navigation-block').fadeOut();
             });
-            /**************************/
-            var changeFont = $('.font-resizer li');
-            $(changeFont).click(function() {
-                if (!$(this).hasClass('active')){
-                    $(changeFont).removeClass('active');
-                    $(this).addClass('active');
-                    var fontSize = $(this).css('font-size');
-                    $('.content-text').css('font-size', fontSize);
-                    $('.comment-text').css('font-size', fontSize);
+            /****************************/
+            var subMenu = $('.sub-menu');
+            var menuControl = $('.menu-control');
+            $(menuControl).click(function () {
+                if($(subMenu).hasClass('visible')) {
+                    $(subMenu).removeClass('visible');
+                    $(menuControl).removeClass('menu-active');
+                    $('.account-menu').css('border-radius', '5px');
+                } else {
+                    $(subMenu).addClass('visible');
+                    $(menuControl).addClass('menu-active');
+                    $('.account-menu').css('border-radius', '5px 5px 0 0');
                 }
             });
             /************* for navi-block *************/
@@ -42,6 +46,23 @@
                 });
             });
             /****************/
+            $('.hint-mark').click(function(){
+                if($(this).hasClass('active')){
+                    $('.hint').fadeOut(1000);
+                    $(this).removeClass('active');
+                } else {
+                    $('.hint').fadeIn(1000);
+                    $(this).addClass('active');
+                }
+            });
+            /****************/
+            $('#rubric-selector').change(function(){
+                if($(this).val() == 'default'){
+                    $(this).css('color', '#cccccc');
+                } else {
+                    $(this).css('color', 'black');
+                }
+            });
         });
     </script>
 </head>
@@ -52,109 +73,35 @@
 
     <div class="right-column">
 
-        <h1>Звезда жизни - отзыв-воспоминание о романе Гамильтона Эдмонда Мура</h1>
-        <ul class="content-info">
-            <li>
-                <div class="param-name">Рубрика:</div>
-                <div class="param-value"><a href="#">Дом и семья</a></div>
-            </li>
-            <li>
-                <div class="param-name">Автор:</div>
-                <div class="param-value"><a href="#">Виктория Гордеева</a></div>
-            </li>
-            <li>
-                <div class="param-name">Дата:</div>
-                <div class="param-value">22 ноября 2015</div>
-            </li>
-            <li>
-                <div class="param-name">Рейтинг:</div>
-                <div class="param-value">10<a class="arrow-image" href="#"></a></div>
-            </li>
-        </ul>
-        <div class="font-resizer">
-            <div class="text-1">Размер шрифта:</div>
-            <ul style="font-size: 15px;">
-                <li class="active small">А</li>
-                <li class="medium" style="font-size: 115%;">А</li>
-                <li class="large" style="font-size: 130%;">А</li>
-            </ul>
-        </div>
-        <div class="content-block">
-            <div class="pictures-block">
-                <img class="content-photo" src="images/content-photo.jpg" alt="Фото статьи"/>
-                <div class="advertising"></div>
-            </div>
-            <div class="content-text">
-                <p>
-                    Меня всегда интересовал космос. К счастью, в моём детстве было достаточно книг, из которых я узнавал
-                    много интересного о космосе. В частности, популярная детская энциклопедия «Я познаю мир. Космос».
-                    Единственное, что серьёзно расстраивало в этой книжке, так это чёткое утверждение, что «жизни на
-                    Марсе нет». А так хотелось верить, что жизнь там всё-таки есть, хотя бы в примитивной форме – бактерии,
-                    мхи и т.п. Из этой же книги, да и из других, узнал, что наше солнце лишь малая часть огромной галактики,
-                    что существуют звёзды в тысячи раз превосходящие размером наше родное светило. Аж дух захватывало!
-                    Хотелось полететь в космос, посмотреть на его красоты… И, видимо, не только мне…
-                </p>
-                <p>
-                    "Давно-давно мальчик из Огайо закричал: «Я очень хочу однажды улететь в космос!». Мальчика звали Кирк
-                    Хэммонд". Такое вот причудливое для русского уха имя. Но это не важно, важно то, что желания – не мечты,
-                    а желания исполняются! Помню в детстве, ребята рассказывали, будто, если сказать, что я хочу вырасти,
-                    то обязательно станешь высоким. Приводили доказательства, типа один просил, а сейчас он под 2 метра
-                    ростом. Я не хотел быть огромным, мне казалось, что вполне хватит и метра с восьмидесятью сантиметрами.
-                    Так и вышло... Не знаю, чего хотел Эдмонд Мур Гамильтон, автор «Звезды жизни»...
-                </p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="comments-info">
-            <div class="param-name">Комментариев:</div>
-            <div class="param-value">3</div>
-        </div>
-        <ul class="comments">
-            <li class="comment">
-                <div class="user-avatar">
-                    <div class="figure-2"></div>
-                    <div class="figure-1"></div>
-                </div>
-                <div class="user-login">Vasya Pupkin</div>
-                <div class="comment-date">20.12.2015</div>
-                <div class="comment-time">14:58:30</div>
-                <div class="comment-text">
-                    Ну, лучше, всё же, роман почитать. Отзыв весьма обобщительный. Если интересно, то лучше роман.
-                    Ну, лично мне он понравился. Прл счастье - это мои рассуждения. Автор романа предлагает подумать.
-                </div>
-            </li>
-            <li class="comment">
-                <div class="user-avatar">
-                    <div class="figure-2"></div>
-                    <div class="figure-1"></div>
-                </div>
-                <div class="user-login">Vasya Pupkin</div>
-                <div class="comment-date">20.12.2015</div>
-                <div class="comment-time">14:58:30</div>
-                <div class="comment-text">
-                    Ну, лучше, всё же, роман почитать. Отзыв весьма обобщительный. Если интересно, то лучше роман.
-                    Ну, лично мне он понравился. Прл счастье - это мои рассуждения. Автор романа предлагает подумать.
-                </div>
-            </li>
-            <li class="comment">
-                <div class="user-avatar">
-                    <div class="figure-2"></div>
-                    <div class="figure-1"></div>
-                </div>
-                <div class="user-login">Vasya Pupkin</div>
-                <div class="comment-date">20.12.2015</div>
-                <div class="comment-time">14:58:30</div>
-                <div class="comment-text">
-                    Ну, лучше, всё же, роман почитать. Отзыв весьма обобщительный. Если интересно, то лучше роман.
-                    Ну, лично мне он понравился. Прл счастье - это мои рассуждения. Автор романа предлагает подумать.
-                </div>
-            </li>
-        </ul>
-        <div class="content-title">Оставить комментарий</div>
-        <form class="form-comment" action="#" onsubmit="return false">
-            <label><textarea id="comment-field" cols="20" rows="5" placeholder="Текст комментария"></textarea></label>
-            <input type="submit" value="Отправить"/>
+        <div class="block-title">Добавление материала</div>
+        <form action="#" class="edit-block" onsubmit="return false">
+            <label class="field-wrap">Рубрика<span class="select-mark">&#9660;</span>
+                <select id="rubric-selector">
+                    <option value="default" selected>Выберите рубрику</option>
+                    <option value="v1">Дом и Семья</option>
+                    <option value="v2">Кулинария, Рецепты, Напитки</option>
+                    <option value="v3">Психология, отношения</option>
+                    <option value="v4">Люди, Имена, Судьбы</option>
+                    <option value="v5">Мода, Стиль, Дизайн</option>
+                    <option value="v6">Работа и Карьера</option>
+                    <option value="v7">Техника и технический прогресс</option>
+                    <option value="v8">Животный мир</option>
+                    <option value="v9">Мужчина и Женщина</option>
+                    <option value="v10">Страхование, Охрана</option>
+                </select>
+            </label>
+            <label class="field-wrap">Заголовок<input type="text" placeholder="Введите заголовок статьи"/></label>
+            <label class="field-wrap">URL<input type="url" placeholder="Адрес URL"/></label>
+            <label class="field-wrap">Аннотация<textarea cols="30" rows="5" placeholder="Аннотация (150 - 300 символов)"></textarea></label>
+            <label class="field-wrap">Описание<textarea cols="30" rows="5" placeholder="Описание (мета-тег description) (100 - 200 символов)"></textarea></label>
+            <label class="field-wrap">Ключевые слова<textarea cols="30" rows="5" placeholder="Ключевые слова (мета-тег keywords) (40 - 100 символов)"></textarea></label>
+            <label><textarea name="editor1"></textarea></label>
+            <script>
+                CKEDITOR.replace( 'editor1' );
+            </script>
+            <input type="submit" value="Сохранить"/>
         </form>
+
     </div>
 
     <div class="left-column">
@@ -244,14 +191,53 @@
         <div class="logo"></div>
         <button class="tagline">РуАвтор - Ваш пропуск в мир копирайтинга</button>
         <button class="competition">Конкурс</button>
-        <form class="form-authorization" action="#"  onsubmit="return false">
-            <div class="to-reg">Регистрация</div>
-            <div class="forget-pass">Забыли пароль?</div>
-            <label><input id="user-name" type="text" placeholder="Ваш логин"/></label>
-            <label><input id="password" type="password" placeholder="Ваш пароль"/></label>
-            <label class="checkbox-label">Запомнить меня<input type="checkbox"/></label>
-            <input type="submit" value="Вход"/>
-        </form>
+        <div class="user-avatar"></div>
+        <div class="user-login">Vasya Pupkin</div>
+        <div class="account-menu">
+            <div class="menu-title">Аккаунт</div>
+            <div class="menu-control">
+                <span class="figure-3"></span>
+            </div>
+            <ul class="sub-menu">
+                <li>
+                    <ul class="account-info">
+                        <li>
+                            <div class="param-name">Черновиков:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">На модерации:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">На доработке:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">Всего комментариев:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">Авторский рейтинг:</div>
+                            <div class="param-value">0</div>
+                        </li>
+                        <li>
+                            <div class="param-name">Рейтинг активности:</div>
+                            <div class="param-value">-2</div>
+                            <div class="hint-mark">i<p class="hint">Описание блока, всплывающее окошко при на ведении bla-bla bla-bla bla-bla bla-bla bla-bla bla-bla bla-bla bla-bla bla-bla bla-bla bla-bla</p></div>
+                        </li>
+                    </ul>
+                </li>
+                <li><span>Профиль автора</span></li>
+                <li><span>Раздел рефералов</span></li>
+                <li><span>Список статей</span></li>
+                <li><span>Список комментариев</span></li>
+                <li><span>Сменить email</span></li>
+                <li><span>Сменить пароль</span></li>
+                <li><span>Назначить кошелек</span></li>
+                <li><span>Выход</span></li>
+            </ul>
+        </div>
     </div>
 </div>
 

@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="arrow34" level="application" />
     <orderEntry type="library" name="arrow34" level="application" />
+    <orderEntry type="library" name="ckeditor" level="application" />
   </component>
 </module>
