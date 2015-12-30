@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг авторов</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navigation').click(function () {
+                $('.navigation-block').fadeIn();
+            });
+            $('.navigation-block').click(function (event) {
+                $target = $(event.target);
+                if (!$target.closest($('.window-nav')).length) $('.navigation-block').fadeOut();
+                if ($target.hasClass('close-window')) $('.navigation-block').fadeOut();
+            });
+            /************* for navi-block *************/
+            var h_hght = 135;
+            var h_mrg = 0;
+            $(function(){
+                $(window).scroll(function(){
+                    var top = $(this).scrollTop();
+                    var elem = $('#navi-block');
+                    if (top+h_mrg < h_hght) {
+                        elem.css('top', (h_hght-top));
+                    } else {
+                        elem.css('top', h_mrg);
+                    }
+                });
+            });
+            /****************/
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="right-column">
+
+        <div class="block-title">Список авторов</div>
+        <table class="top-authors">
+            <tr>
+                <th>#</th>
+                <th>Ник</th>
+                <th>Имя</th>
+                <th>Кол-во статей</th>
+                <th>Рейтинг</th>
+                <th>Статус</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#">Elro</a></td>
+                <td>Елена Асвойнова-Травина</td>
+                <td>113</td>
+                <td>2178</td>
+                <td>Журналист</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#">devatyh</a></td>
+                <td>Леонид Девятых</td>
+                <td>43</td>
+                <td>813</td>
+                <td>Публицист</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#">Nick Martyn</a></td>
+                <td>Николай Мартынов</td>
+                <td>30</td>
+                <td>505</td>
+                <td>Публицист</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#">AWC</a></td>
+                <td>Екатерина Регунова</td>
+                <td>35</td>
+                <td>493</td>
+                <td>Публицист</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="#">lykov</a></td>
+                <td>Лыков Алексей</td>
+                <td>74</td>
+                <td>458</td>
+                <td>Публицист</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="#">Maschule4ka</a></td>
+                <td>Мария Фрик</td>
+                <td>16</td>
+                <td>357</td>
+                <td>Публицист</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="#">Lelic</a></td>
+                <td>Ольга Перфилова</td>
+                <td>26</td>
+                <td>347</td>
+                <td>Публицист</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="#">Alyaya</a></td>
+                <td>Алина Агафонова</td>
+                <td>25</td>
+                <td>308</td>
+                <td>Публицист</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="#">Prehistoric port</a></td>
+                <td>Вика Белощина</td>
+                <td>11</td>
+                <td>233</td>
+                <td>Публицист</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="#">Chega</a></td>
+                <td>Надежда Заколюкина</td>
+                <td>16</td>
+                <td>183</td>
+                <td>Публицист</td>
+            </tr>
+        </table>
+
+        <ul class="page-numbers">
+            <li><a  class="active" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">...</a></li>
+        </ul>
+
+    </div>
+
+    <div class="left-column">
+
+        <div class="navi-block" id="navi-block">
+
+            <button class="navigation">Навигация</button>
+
+            <button class="add-material">Добавить материал</button>
+
+        </div>
+
+        <div class="block-title after-navi">Топ 5-ти авторов</div>
+        <table class="authors-top">
+            <tr>
+                <th>#</th>
+                <th>Ник</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#">Elro</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#">devatyh</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#">Nick Martyn</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#">AWC</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="#">lykov</a></td>
+            </tr>
+        </table>
+
+        <div class="block-title">Песочница</div>
+        <div class="sub-title">Последние публикации</div>
+        <ul class="sandbox">
+            <li><a href="#">Как натренировать кра&shy;сивые и сильные бедра? Какие нужно делать упражнения,
+                на каких тренажерах? Что такое изолированные упраж&shy;нения?</a>
+            </li>
+            <li>
+                <a href="#">Звезда жизни - отзыв воспоминание о романе Гамильтона Эдмонда Мура</a>
+            </li>
+            <li>
+                <a href="#">Шевеление плода при беременности. На какой неделе беременности первые шевеления плода?</a>
+            </li>
+            <li>
+                <a href="#">В песочницу</a>
+            </li>
+        </ul>
+
+        <div class="block-title">Отклики</div>
+        <div class="sub-title">Последние отклики</div>
+        <ul class="reviews">
+            <li>
+                <div class="review-name">Лыков Алексей</div>
+                <div class="review-text">
+                    <a href="#">Кроха сын пришёл к отцу и спросила кроха, что так</a>...
+                </div>
+            </li>
+            <li>
+                <div class="review-name">Лыков Алексей</div>
+                <div class="review-text">
+                    <a href="#">Кроха сын пришёл к отцу и спросила кроха, что так</a>...
+                </div>
+            </li>
+            <li>
+                <div class="review-name">Лыков Алексей</div>
+                <div class="review-text">
+                    <a href="#">Кроха сын пришёл к отцу и спросила кроха, что так</a>...
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="header">
+    <div class="header-block">
+        <div class="logo"></div>
+        <button class="tagline">РуАвтор - Ваш пропуск в мир копирайтинга</button>
+        <button class="competition">Конкурс</button>
+        <form class="form-authorization" action="#"  onsubmit="return false">
+            <div class="to-reg">Регистрация</div>
+            <div class="forget-pass">Забыли пароль?</div>
+            <label><input id="user-name" type="text" placeholder="Ваш логин"/></label>
+            <label><input id="password" type="password" placeholder="Ваш пароль"/></label>
+            <label class="checkbox-label">Запомнить меня<input type="checkbox"/></label>
+            <input type="submit" value="Вход"/>
+        </form>
+    </div>
+</div>
+
+<div class="navigation-block">
+    <div class="window-nav">
+        <div class="title-window">Навигация</div>
+        <div class="close-window">Закрыть</div>
+        <ul class="nav-pages">
+            <li onclick="return location.href = 'http://www.google.com/'">Авторы</li>
+            <li>Правила</li>
+            <li>Новости</li>
+            <li>Контакты</li>
+        </ul>
+        <div class="block-title">Рубрики</div>
+        <ul class="rubrics">
+            <li>
+                <ul>
+                    <li>Дом и Семья</li>
+                    <li>Кулинария, Рецепты, Напитки</li>
+                    <li>Животный мир</li>
+                    <li>Мужчина и Женщина</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Психология, отношения</li>
+                    <li>Очевидное-Невероятное</li>
+                    <li>История, культура</li>
+                    <li>Игры, увлечения, хобби</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Праздники, Даты, События</li>
+                    <li>Природа Земли</li>
+                    <li>Обучение</li>
+                    <li>Люди, Имена, Судьбы</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Интернет, Социальные сети</li>
+                    <li>Мир людей</li>
+                    <li>Интересные факты</li>
+                    <li>Растения, Растительный мир</li>
+                    <li>Мода, Стиль, Дизайн</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="block-title">Особые рубрики</div>
+        <ul class="rubrics">
+            <li>
+                <ul>
+                    <li>Работа и Карьера</li>
+                    <li>Здоровье и Красота</li>
+                    <li>Техника и технический прогресс</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Товары и Услуги</li>
+                    <li>Отзывы, Рецензии</li>
+                    <li>Ремонт и Строительство</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Туризм, Путешествия, Отдых</li>
+                    <li>Автомобили, Мотоциклы</li>
+                    <li>Деньги, Финансы, Кредит</li>
+                    <li>Спорт и активный отдых</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Недвижимость</li>
+                    <li>Юридические вопросы</li>
+                    <li>Связь и Коммуникация</li>
+                    <li>Страхование, Охрана</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="content-block">
+        <div>COPYRIGHT © 2011-2015. ИНФОРМАЦИОННЫЙ ПОЗНАВАТЕЛЬНЫЙ ИНТЕРНЕТ-ЖУРНАЛ "РУАВТОР" 16+</div>
+        <div>При полном или частичном копировании материалов активная прямая гипер-ссылка на www.RuAvtor.ru обязательна!</div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow34.js"></script>
+
+</body>
+</html>
