@@ -889,6 +889,27 @@ input[type="submit"] {
     font-weight: 600;
 }
 .personal-page .comment-links .date, .personal-page .comment-links .time {display: inline-block}
+/****************************
+****** Resources page *******
+****************************/
+.resources .publication-info li:first-child {
+    width: 100%;
+}
+.resources .actions li:first-child {
+    border-top: none;
+    height: 50px;
+    line-height: 50px;
+}
+.resources .actions button {
+    padding: 0 10px;
+    height: 35px;
+}
+.resources .to-edit {background: #4e9351; margin-left: 10px; }
+.resources .to-delete {background: #ab2c2c;}
+.resources .to-check {background: #df9e02;}
+.resources .param-name, .resources .param-value {
+    font-weight: 600;
+}
 /*********** footer ************/
 .footer {
     width: 100%;
